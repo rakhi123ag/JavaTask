@@ -46,10 +46,20 @@ public class APP {
          stu.Marks=new int[5];
          stu.Subject=new String[5];
          for(int j=0;j<5;j++)
-         {     
+         {    
+             int m=0;
              stu.Subject[j]=Basesubject[rand.nextInt(9)];
              stu.Marks[j]=rand.nextInt(60)+40 ;
-         }
+             
+             for(int c=0;c<j;c++)
+             {
+               if(stu.Subject[c]==stu.Subject[j])
+               {
+                 stu.Subject[j]=Basesubject[rand.nextInt(9)];  
+               } 
+             }
+             }
+         
          
         st.add(stu);
      }
