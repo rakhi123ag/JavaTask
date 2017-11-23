@@ -40,22 +40,25 @@ public class APP {
      for(int i=1;i<=n;i++)
      {
          Student stu=new Student();
+         //stu.sub=new Subject();
+         //stu.sub.marks=new Marks();
+         //stu.sub.subjects=new Subjects();
         
          stu.stuname="Student"+i;
          stu.rollno=baseRollNo + i;
-         stu.Marks=new int[5];
-         stu.Subject=new String[5];
+         stu.sub.marks.Marks=new int[5];
+         stu.sub.subjects.Subjects=new String[5];
          for(int j=0;j<5;j++)
          {    
-             int m=0;
-             stu.Subject[j]=Basesubject[rand.nextInt(9)];
-             stu.Marks[j]=rand.nextInt(60)+40 ;
+             
+             stu.sub.subjects.Subjects[j]=Basesubject[rand.nextInt(9)];
+             stu.sub.marks.Marks[j]=rand.nextInt(60)+40 ;
              
              for(int c=0;c<j;c++)
              {
-               if(stu.Subject[c]==stu.Subject[j])
+               if(stu.sub.subjects.Subjects[c]==stu.sub.subjects.Subjects[j])
                {
-                 stu.Subject[j]=Basesubject[rand.nextInt(9)];  
+                 stu.sub.subjects.Subjects[j]=Basesubject[rand.nextInt(9)];  
                } 
              }
              }
@@ -76,8 +79,8 @@ public class APP {
         {
             System.out.println(st.get(i).stuname);
             System.out.println(st.get(i).rollno);
-            int Marks[]=st.get(i).Marks;
-            String Subject[]=st.get(i).Subject;
+            int Marks[]=st.get(i).sub.marks.Marks;
+            String Subject[]=st.get(i).sub.subjects.Subjects;
             for(int k=0;k<5;k++)
             {
               System.out.println(Subject[k]+"="+Marks[k]);  

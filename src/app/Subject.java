@@ -9,14 +9,14 @@ package app;
  *
  * @author This PC
  */
-public class Student {
- public String stuname;
- public int rollno; 
- public Subject sub;
- Student()
- {
-     sub=new Subject();
- }
- 
+public class Subject {
+
+public Marks marks;
+public Subjects subjects;
+Subject()
+{
+    marks=new Marks();
+    subjects=new Subjects();
 }
-//create another class and move marks and subject to that class
+    
+}
